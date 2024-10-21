@@ -1,11 +1,11 @@
 app-id: io.github.equicord.equibop
 
 runtime: org.freedesktop.Platform
-runtime-version: '23.08'
+runtime-version: "23.08"
 sdk: org.freedesktop.Sdk
 
 base: org.electronjs.Electron2.BaseApp
-base-version: '23.08'
+base-version: "23.08"
 
 command: startequibop
 separate-locales: false
@@ -48,7 +48,7 @@ modules:
 
       - type: file
         url: https://raw.githubusercontent.com/Equicord/Equibop/main/meta/io.github.equicord.equibop.metainfo.xml
-        sha512: acc37ccf88667abd8d411719de4831746e19041e1ee3cd2c4a2cb2fb2fad46d4660c7accda475d12a3784580555c9a799c14250ce904f6e09ab22b25452bb3b2
+        sha512: 6914b7618594eff64daff9d3208c1f551e2d18ceb53a1d54fd1c5ee92a54b6b5fa69af5b87a8e37729dbbaeadedfab386396a023e240c50cb0dc7e780f27968a
         x-checker-data:
           type: json
           url: https://api.github.com/repos/Equicord/Equibop/contents/meta/io.github.equicord.equibop.metainfo.xml
