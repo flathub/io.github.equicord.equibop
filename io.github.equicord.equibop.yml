@@ -1,11 +1,11 @@
 app-id: io.github.equicord.equibop
 
 runtime: org.freedesktop.Platform
-runtime-version: "23.08"
+runtime-version: '23.08'
 sdk: org.freedesktop.Sdk
 
 base: org.electronjs.Electron2.BaseApp
-base-version: "23.08"
+base-version: '23.08'
 
 command: startequibop
 separate-locales: false
@@ -58,7 +58,7 @@ modules:
       - type: file
         url: https://github.com/Equicord/Equibop/releases/latest/download/Equibop-linux-x86_64.AppImage
         dest-filename: Equibop.AppImage
-        sha512: 7a85a5173ddbe3e69d72b8d55136a429e92db97b6098c39564df76aab23e744bcacfa7c1f9dc0b81321d04e4b31c6c95f4759599fc946fb9f86985a004c14558
+        sha512: db6b0e3befc294b3f5658de18f9437680b3c594aa17b462a8026b05b89df29448fdc72b2fc01c6f9172c448148dc9e8a24ce55e5f7b3ddd15dc6ff8346ba7f1a
         only-arches: [x86_64]
         x-checker-data:
           type: electron-updater
@@ -67,7 +67,7 @@ modules:
       - type: file
         url: https://github.com/Equicord/Equibop/releases/latest/download/Equibop-linux-arm64.AppImage
         dest-filename: Equibop.AppImage
-        sha512: 75b6ff56401eae850e85cd56c35720269df0d2ea71eea6be76e83764fb654a432f92b4d0f1bc0802250ca15342ea2a89fe85d53d80e9ab0a7a1c70a3c241959b
+        sha512: 89226c6ee209ca11187e9742f74d7de629cd2d99d2d1fee10cb09ae631c1e6006117cf6a735a29baeacf4f7cbecde6248b7c547c25acb00897e440aef3d5b0b9
         only-arches: [aarch64]
         x-checker-data:
           type: electron-updater
