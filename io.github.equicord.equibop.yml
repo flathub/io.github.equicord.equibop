@@ -49,6 +49,7 @@ modules:
       - type: file
         url: https://raw.githubusercontent.com/Equicord/Equibop/main/meta/io.github.equicord.equibop.metainfo.xml
         sha512: 1ee8b5ebf79da15844bf69e32b70f004735b0f44615f988315020876ee2c1293bb7d6f6fce436b8e70b4ac38e994e936547487cd4df8e4768b9fe8de7ddfa96c
+        master
         x-checker-data:
           type: json
           url: https://api.github.com/repos/Equicord/Equibop/contents/meta/io.github.equicord.equibop.metainfo.xml
