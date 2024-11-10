@@ -32,10 +32,12 @@ modules:
     build-commands:
       - chmod +x Equibop.AppImage
       - ./Equibop.AppImage --appimage-extract
-      - desktop-file-edit --set-key="Exec" --set-value="startequibop" --set-icon=$FLATPAK_ID
-        squashfs-root/equibop.desktop
-      - install -D squashfs-root/usr/share/icons/hicolor/512x512/apps/equibop.png
-        /app/share/icons/hicolor/512x512/apps/io.github.equicord.equibop.png
+      - desktop-file-edit --set-key="Exec" --set-value="startequibop" --set-icon=$FLATPAK_ID squashfs-root/equibop.desktop
+      - |
+        for icon in 16 32 48 64 128 256 512; do
+          install -D squashfs-root/usr/share/icons/hicolor/${icon}x${icon}/apps/equibop.png \
+          /app/share/icons/hicolor/${icon}x${icon}/apps/io.github.equicord.equibop.png
+        done
       - install -D squashfs-root/usr/share/icons/hicolor/16x16/apps/equibop.png /app/share/icons/hicolor/16x16/apps/io.github.equicord.equibop.png
       - install -D squashfs-root/equibop.desktop /app/share/applications/io.github.equicord.equibop.desktop
       - install -Dm755 startequibop /app/bin/startequibop

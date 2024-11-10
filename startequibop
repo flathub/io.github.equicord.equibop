@@ -1,8 +1,19 @@
 #!/usr/bin/env bash
 
-export TMPDIR="$XDG_RUNTIME_DIR/app/${FLATPAK_ID:-io.github.thororen.equibop}"
+export TMPDIR="$XDG_RUNTIME_DIR/app/${FLATPAK_ID:-io.github.equicord.equibop}"
 
 declare -a FLAGS=(--enable-speech-dispatcher)
+
+    if [[ " $* " == *" --toggle-deaf "* ]]; then
+        echo "VCD_TOGGLE_SELF_DEAF" >> "$XDG_RUNTIME_DIR/vesktop-ipc"
+        exit
+    fi
+
+    if [[ " $* " == *" --toggle-mic "* ]]; then
+        echo "VCD_TOGGLE_SELF_MUTE" >> "$XDG_RUNTIME_DIR/vesktop-ipc"
+        exit
+    fi
+fi
 
 if [[ $XDG_SESSION_TYPE == "wayland" ]]; then
     if [[ -c /dev/nvidia0 ]]; then
@@ -19,6 +30,7 @@ if [[ $XDG_SESSION_TYPE == "wayland" ]]; then
         echo "Wayland socket is available, running natively on Wayland."
         echo "To disable, remove the --socket=wayland permission."
         FLAGS+=(--ozone-platform-hint=auto)
+        FLAGS+=(--enable-wayland-ime)
     fi
 fi
 
