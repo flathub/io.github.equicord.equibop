@@ -4,15 +4,14 @@ export TMPDIR="$XDG_RUNTIME_DIR/app/${FLATPAK_ID:-io.github.equicord.equibop}"
 
 declare -a FLAGS=(--enable-speech-dispatcher)
 
-    if [[ " $* " == *" --toggle-deaf "* ]]; then
-        echo "VCD_TOGGLE_SELF_DEAF" >> "$XDG_RUNTIME_DIR/vesktop-ipc"
-        exit
-    fi
+if [[ " $* " == *" --toggle-deafen "* ]]; then
+    echo "VCD_TOGGLE_SELF_DEAF" >> "$XDG_RUNTIME_DIR/vesktop-ipc"
+    exit
+fi
 
-    if [[ " $* " == *" --toggle-mic "* ]]; then
-        echo "VCD_TOGGLE_SELF_MUTE" >> "$XDG_RUNTIME_DIR/vesktop-ipc"
-        exit
-    fi
+if [[ " $* " == *" --toggle-mic "* ]]; then
+    echo "VCD_TOGGLE_SELF_MUTE" >> "$XDG_RUNTIME_DIR/vesktop-ipc"
+    exit
 fi
 
 if [[ $XDG_SESSION_TYPE == "wayland" ]]; then
