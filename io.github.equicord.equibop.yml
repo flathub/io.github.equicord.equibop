@@ -1,11 +1,11 @@
 app-id: io.github.equicord.equibop
 
 runtime: org.freedesktop.Platform
-runtime-version: "23.08"
+runtime-version: "24.08"
 sdk: org.freedesktop.Sdk
 
 base: org.electronjs.Electron2.BaseApp
-base-version: "23.08"
+base-version: "24.08"
 
 command: startequibop
 separate-locales: false
@@ -50,7 +50,7 @@ modules:
 
       - type: file
         url: https://raw.githubusercontent.com/Equicord/Equibop/main/meta/io.github.equicord.equibop.metainfo.xml
-        sha512: c4e0a51a09fa4fb824f6c3f92af72a903dd79a5df532553f4c7d9f8752e11a97b3f2437f2dceab42820c5edca15a95456abedb5aff55c7a62527276282c812de
+        sha512: e1db41618a438266038a88cffee241caf92a42b92440293bf6251bfe1deb2f39cecd62f17cbb6c16e95742038d52c54212104a478c5447b6c598802fa061d2df
         x-checker-data:
           type: json
           url: https://api.github.com/repos/Equicord/Equibop/contents/meta/io.github.equicord.equibop.metainfo.xml
@@ -60,7 +60,7 @@ modules:
       - type: file
         url: https://github.com/Equicord/Equibop/releases/latest/download/Equibop-linux-x86_64.AppImage
         dest-filename: Equibop.AppImage
-        sha512: fa4626f5a90c4cb8da53d12710185b6177d6ee6f56d6efc37ab8e071ab5a173ee1525fb40084b3bdff2690288d29b70ce8f7eeac86ef35b0bc4a32cefcc36426
+        sha512: a77bc805bf815c419443e7d77cf0571f810669f11dcc74f347f4874af6bce78b1ac9a8e3e6b18ea9a00daf9e237a8287115a55a23636779e33c6c9e3311a7739
         only-arches: [x86_64]
         x-checker-data:
           type: electron-updater
@@ -69,7 +69,7 @@ modules:
       - type: file
         url: https://github.com/Equicord/Equibop/releases/latest/download/Equibop-linux-arm64.AppImage
         dest-filename: Equibop.AppImage
-        sha512: aa768f0c08c52a2da45e9e19d4c23770552c6e9baf27930382ad63ffad425d1b8e4aa4b19411442f658f93b3dfe519f643c8b9c4de6eb9ae40f8ff0361d7bde3
+        sha512: 8bdb53e941d8bf6504d63282e2a398b85412b0fafbf0da4bbdc99c3af3b98d4e09633f348190d35d63b1e7402bc8b4f74810d4cfc4205edd4115b210be5f5f4c
         only-arches: [aarch64]
         x-checker-data:
           type: electron-updater
