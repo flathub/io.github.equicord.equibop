@@ -1,11 +1,11 @@
 app-id: io.github.equicord.equibop
 
 runtime: org.freedesktop.Platform
-runtime-version: "23.08"
+runtime-version: '23.08'
 sdk: org.freedesktop.Sdk
 
 base: org.electronjs.Electron2.BaseApp
-base-version: "24.08"
+base-version: '24.08'
 
 command: startequibop
 separate-locales: false
@@ -32,7 +32,8 @@ modules:
     build-commands:
       - chmod +x Equibop.AppImage
       - ./Equibop.AppImage --appimage-extract
-      - desktop-file-edit --set-key="Exec" --set-value="startequibop" --set-icon=$FLATPAK_ID squashfs-root/equibop.desktop
+      - desktop-file-edit --set-key="Exec" --set-value="startequibop" --set-icon=$FLATPAK_ID
+        squashfs-root/equibop.desktop
       - |
         for icon in 16 32 48 64 128 256 512; do
           install -D squashfs-root/usr/share/icons/hicolor/${icon}x${icon}/apps/equibop.png \
