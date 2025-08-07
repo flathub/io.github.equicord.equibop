@@ -1,11 +1,11 @@
 app-id: io.github.equicord.equibop
 
 runtime: org.freedesktop.Platform
-runtime-version: "23.08"
+runtime-version: '23.08'
 sdk: org.freedesktop.Sdk
 
 base: org.electronjs.Electron2.BaseApp
-base-version: "24.08"
+base-version: '24.08'
 
 command: startequibop
 separate-locales: false
@@ -32,7 +32,8 @@ modules:
     build-commands:
       - chmod +x Equibop.AppImage
       - ./Equibop.AppImage --appimage-extract
-      - desktop-file-edit --set-key="Exec" --set-value="startequibop" --set-icon=$FLATPAK_ID squashfs-root/equibop.desktop
+      - desktop-file-edit --set-key="Exec" --set-value="startequibop" --set-icon=$FLATPAK_ID
+        squashfs-root/equibop.desktop
       - |
         for icon in 16 32 48 64 128 256 512; do
           install -D squashfs-root/usr/share/icons/hicolor/${icon}x${icon}/apps/equibop.png \
@@ -60,7 +61,7 @@ modules:
       - type: file
         url: https://github.com/Equicord/Equibop/releases/latest/download/Equibop-linux-x86_64.AppImage
         dest-filename: Equibop.AppImage
-        sha512: 7d2bad003428141b1de1f1e8d12a720c8a0f6be06832d443ff521537c78a4fe0233cb76eff6fe781327f1504dbd1fd5dd6f102afddcff200f10379eb42ccad99
+        sha512: 5a8b6c0d95856a1edd04c6721af5114beae9aa9dfa01127203c0473b4f28d3f8fd7dcc6f6ba82faedef50cf711db667376e62ffcddda6710a9919247e8aa0cee
         only-arches: [x86_64]
         x-checker-data:
           type: electron-updater
@@ -69,7 +70,7 @@ modules:
       - type: file
         url: https://github.com/Equicord/Equibop/releases/latest/download/Equibop-linux-arm64.AppImage
         dest-filename: Equibop.AppImage
-        sha512: c0d824ee0e0ee776df85c4c6a9890c644635d5a0e81cff269d3645da08a2e412eff1b07232ec14e6548658a4f1aeecaf3e6545857d224dba613ef48e6ebefc8c
+        sha512: 94d8b5803cc58f16a55ae176996cfbcfe231dec2dc6b762c5abc6186976950f6ab5f4ae7baf460b3ceb621a9fd0a125aee70d7a611bbeac904ec912283fafabc
         only-arches: [aarch64]
         x-checker-data:
           type: electron-updater
