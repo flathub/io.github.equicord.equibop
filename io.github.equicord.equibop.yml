@@ -50,7 +50,7 @@ modules:
         path: startequibop
 
       - type: file
-        url: https://github.com/Equicord/Equibop/releases/download/v2.1.6/io.github.equicord.equibop.metainfo.xml
+        url: https://raw.githubusercontent.com/Equicord/Equibop/main/meta/io.github.equicord.equibop.metainfo.xml
         sha512: 91d3e88e21488d21aa6a484ae665314fc095e613795ac3f1c17cf928118029b5f89ed2d85b75476f869fbbf2cb30eb3213b462cc9b0b1769163bde2492a1cfa4
         x-checker-data:
           type: json
