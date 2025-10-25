@@ -60,18 +60,18 @@ modules:
             | .browser_download_url
 
       - type: file
-        url: https://github.com/Equicord/Equibop/releases/latest/download/Equibop-linux-x86_64.AppImage
+        url: https://github.com/Equicord/Equibop/releases/latest/download/Equibop-3.0.4.AppImage
         dest-filename: Equibop.AppImage
-        sha512: 63b38f73bcb280ff371b5051d2605bb4898cedfcfe83fdaebd93c6331d306dc6983c546c614d98160594ad4954349dc8607e62c811742fbe8feb08ac935b242e
+        sha512: c99d487a7c5fe9f0531c0cf46a6952a39330dac63b51327a1caced372bbdf2e34aa07bdec901db571eb894f39ebdf13647cf59326c0ac3cd023da6f499e03cd6
         only-arches: [x86_64]
         x-checker-data:
           type: electron-updater
           url: https://github.com/Equicord/Equibop/releases/latest/download/latest-linux.yml
 
       - type: file
-        url: https://github.com/Equicord/Equibop/releases/latest/download/Equibop-linux-arm64.AppImage
+        url: https://github.com/Equicord/Equibop/releases/latest/download/Equibop-3.0.4-arm64.AppImage
         dest-filename: Equibop.AppImage
-        sha512: 3fd2305052b7140fc4e4e0c7aabdc085c0f457d0d8791c21fb8b680e46e8307443e6915d42ce604710d7c8b317c02eab32d0df9808ddef00c2a0d9e0dbb865b6
+        sha512: 18f0e8d972442d2f76503277f3aa8bde4288f8c2f82d419e0c49c67f0b6cad5ce050f79c8c2fbacb08a42ec8fa49e7fe0110b138bf06fd4cac93f4aa247497bb
         only-arches: [aarch64]
         x-checker-data:
           type: electron-updater
